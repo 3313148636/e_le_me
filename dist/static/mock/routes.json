@@ -1,3 +1,6 @@
 {
-    "/api/job/list_time": "/list"
+    "/api/job/list_time": "/list",
+
+    "/api/entry/entry_list" : "/entry_list"
+
 }
