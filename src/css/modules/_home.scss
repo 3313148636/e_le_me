@@ -105,12 +105,12 @@ div{
 }
 .activity{
     width: 100%;
-    height: 3.7333rem;
+    
     padding: 0 20px;
     margin-bottom: 0.2133rem;
 }
 .section{
-    height: 100%;
+    height: 3.7333rem;
     display: flex;
     justify-content: space-between;
 }
@@ -155,6 +155,18 @@ div{
     width: 3.2rem;
     height: 2.1333rem;
 }
+.activity .banner{
+    width: 100%;
+    margin-top: 1.733333vw;
+    border-radius: 1.066667vw;
+    height: 23.466667vw;
+}
+.activity .banner .swiper-slide img{
+    width: 100%;
+    height: 100%;
+}
+
+
 .recommend-business{
     width: 100%;
     height: 0.96rem;

@@ -1,5 +1,5 @@
 
-//home视图的控制器
+
 import shoplist_template from '../views/shoplist/shoplist.html';
 import shoplist_models from '../models/shoplist_models.js';
 import BScroll from 'better-scroll';
