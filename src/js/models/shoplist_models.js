@@ -5,7 +5,6 @@ const shop_list = () => {
                 // url: '/static/mock/list.json',
                 url: '/api/job/list_time',
                 success: (res) => {
-                    console.log(123);
                     return res;
                 }
             })
