@@ -2,7 +2,6 @@
 
 import shoplist_template from '../views/shoplist/shoplist.html';
 import shoplist_models from '../models/shoplist_models.js';
-import BScroll from 'better-scroll';
 
 const render = async () => {
     
@@ -14,6 +13,7 @@ const render = async () => {
     $('ul.shoplist').html(_html); 
     //查看活动
     $('li.item').bind('click',function(e){
+        
         if(e.target.nodeName === 'I'){
             var display_status = $(this).find('.third-l').css('display');
             if(display_status === 'none'){
@@ -30,15 +30,7 @@ const render = async () => {
         }
     })
 
-    let scroll = new BScroll('#root',{
-        probeType:2
-    })
-    //屏幕滚动事件
-    scroll.on('scroll',({x,y})=>{
-        if(y>0){
-            scroll.scrollTo(0,0);
-        }
-    })
+   
 }
 export default {
     render
