@@ -12,7 +12,7 @@ const render = async () => {
     $('ul.shoplist').html(_html); 
     
     //查看活动
-    $('li.item').bind('click',function(e){
+    $('li.item').bind('tap',function(e){
         if(e.target.nodeName === 'I'){
             var display_status = $(this).find('.third-l').css('display');
             if(display_status === 'none'){
@@ -33,6 +33,7 @@ const render = async () => {
     var flag = true;
     $(window).on('scroll',function(){
         var scroll_y = $(window).scrollTop();
+        //ajax请求数据
         if(scroll_y > Y-1350 && flag == true){
             flag = false;
             $('.loading').css('display','flex');
@@ -43,8 +44,18 @@ const render = async () => {
                 flag = true;
             },2000)
         }
+        //回到顶部图标出现
+        if(scroll_y > 800){
+            $('.BackTop-wrapper').css('display','flex');
+        }else{
+            $('.BackTop-wrapper').css('display','none');
+        }
     })
 
+    //点击回到顶部
+    $('.BackTop-wrapper').bind('tap',()=>{
+        $(window).scrollTop(0);
+    })
     
 }
 export default {

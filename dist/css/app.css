@@ -433,3 +433,76 @@ li .bottom .second {
     fill: #0089dc; }
   #footer .svg_span span {
     color: #0089dc; }
+
+.home_nav {
+  position: fixed;
+  bottom: 2rem;
+  z-index: 999;
+  right: .266667rem;
+  width: 1.333333rem;
+  height: 2.666667rem; }
+  .home_nav .border {
+    border: 1px solid #999;
+    border-radius: 50%;
+    width: 1.133333rem;
+    height: 1.133333rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: .2rem;
+    background: #fff; }
+  .home_nav .cart svg {
+    height: .533333rem;
+    width: .533333rem; }
+  .home_nav .BackTop-wrapper img {
+    height: .533333rem;
+    width: .533333rem; }
+  .home_nav .BackTop-wrapper {
+    display: none; }
+
+.indent-container .indent-header {
+  width: 100%;
+  height: 1.173333rem;
+  position: relative;
+  background-image: linear-gradient(90deg, #0af, #0085ff);
+  text-align: center;
+  line-height: 1.173333rem; }
+  .indent-container .indent-header span {
+    font-weight: 700;
+    font-size: .466667rem;
+    color: #fff; }
+  .indent-container .indent-header img {
+    position: absolute;
+    width: .266667rem;
+    height: .466667rem;
+    top: .346667rem;
+    left: .266667rem; }
+
+.indent-container .indent-main {
+  background-color: #f5f5f5;
+  width: 100%;
+  min-height: 15.28rem;
+  text-align: center;
+  padding-top: 2.666667rem; }
+  .indent-container .indent-main .logo {
+    width: 5.333333rem;
+    height: 3.851733rem; }
+  .indent-container .indent-main h3 {
+    margin: .266667rem 0 .366667rem;
+    color: #6a6a6a;
+    font-weight: 400;
+    font-size: .453333rem; }
+  .indent-container .indent-main .limited {
+    color: #999; }
+    .indent-container .indent-main .limited svg {
+      width: 15px;
+      height: 15px;
+      transform: rotate(90deg); }
+  .indent-container .indent-main .indent-list {
+    list-style: none; }
+    .indent-container .indent-main .indent-list .indent-list--li {
+      width: 100%;
+      padding: 0;
+      height: 2.853333rem;
+      margin-top: .266667rem;
+      background: #fff; }

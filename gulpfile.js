@@ -8,7 +8,7 @@ const del = require('del');
 
 //全局的配置
 const config = require('./config');
-const {server_config , sass_config,webpack_config} = config;
+const {server_config, sass_config, webpack_config} = config;
 
 //开启热更新服务器
 gulp.task('server',()=>{
