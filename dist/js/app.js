@@ -97,6 +97,28 @@ eval("function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg)
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime/helpers/classCallCheck.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/classCallCheck.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("function _classCallCheck(instance, Constructor) {\n  if (!(instance instanceof Constructor)) {\n    throw new TypeError(\"Cannot call a class as a function\");\n  }\n}\n\nmodule.exports = _classCallCheck;\n\n//# sourceURL=webpack:///./node_modules/@babel/runtime/helpers/classCallCheck.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/createClass.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/createClass.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("function _defineProperties(target, props) {\n  for (var i = 0; i < props.length; i++) {\n    var descriptor = props[i];\n    descriptor.enumerable = descriptor.enumerable || false;\n    descriptor.configurable = true;\n    if (\"value\" in descriptor) descriptor.writable = true;\n    Object.defineProperty(target, descriptor.key, descriptor);\n  }\n}\n\nfunction _createClass(Constructor, protoProps, staticProps) {\n  if (protoProps) _defineProperties(Constructor.prototype, protoProps);\n  if (staticProps) _defineProperties(Constructor, staticProps);\n  return Constructor;\n}\n\nmodule.exports = _createClass;\n\n//# sourceURL=webpack:///./node_modules/@babel/runtime/helpers/createClass.js?");
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/regenerator/index.js":
 /*!**********************************************************!*\
   !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
@@ -138,7 +160,7 @@ eval("/**\n * Copyright (c) 2014-present, Facebook, Inc.\n *\n * This source cod
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _controllers_home_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./controllers/home_controller */ \"./src/js/controllers/home_controller.js\");\n\n_controllers_home_controller__WEBPACK_IMPORTED_MODULE_0__[\"default\"].render();\n\n//# sourceURL=webpack:///./src/js/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _route__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./route */ \"./src/js/route/index.js\");\n // import home_controller from './controllers/home_controller';\n// home_controller.render(); \n// 启动路由\n\nvar router = new _route__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\nwindow.router = router;\nrouter.init();\n\n//# sourceURL=webpack:///./src/js/app.js?");
 
 /***/ }),
 
@@ -199,6 +221,30 @@ eval("__webpack_require__.r(__webpack_exports__);\n//提供首页轮播图entrie
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n// 提供商品信息数据\nvar shop_list = function shop_list() {\n  return $.ajax({\n    // url: '/static/mock/list.json',\n    url: '/api/job/list_time',\n    success: function success(res) {\n      return res;\n    }\n  });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  shop_list: shop_list\n});\n\n//# sourceURL=webpack:///./src/js/models/shoplist_models.js?");
+
+/***/ }),
+
+/***/ "./src/js/route/index.js":
+/*!*******************************!*\
+  !*** ./src/js/route/index.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ \"./node_modules/@babel/runtime/helpers/classCallCheck.js\");\n/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ \"./node_modules/@babel/runtime/helpers/createClass.js\");\n/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _route__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./route */ \"./src/js/route/route.js\");\n\n\n// 实现路由工具\n\n\nvar Router =\n/*#__PURE__*/\nfunction () {\n  function Router() {\n    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Router);\n\n    this.routes = _route__WEBPACK_IMPORTED_MODULE_2__[\"default\"]; // 路由表\n\n    this.initial = ''; // 默认路由\n  }\n\n  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Router, [{\n    key: \"init\",\n    value: function init() {\n      this.initialHash();\n      this.listenHashChange();\n    }\n  }, {\n    key: \"initialHash\",\n    value: function initialHash() {\n      // 初始化hash值\n      // location.hash\n      if (!location.hash) {\n        location.hash = this.initial;\n      }\n\n      ; // this.currentUrl = location.hash;\n    }\n  }, {\n    key: \"switch\",\n    value: function _switch(path) {\n      // 切换路由的方法，方便在js事件等场景调用，需要切换模式的话在这里切换就ok\n      location.hash = path;\n    }\n  }, {\n    key: \"refresh\",\n    value: function refresh() {\n      // 根据当前的路径 来 切换路由\n      var hash = location.hash;\n\n      if (!this.routes[hash]) {\n        // 路由表里没有配置这个路由\n        // 回到默认路由\n        location.hash = this.initial;\n        return false;\n      }\n\n      this.routes[hash].render(); //this.switchTab();\n    } // switchTab () {\n    //     // 要求需要根据路由切换而切换active类名的元素，必须加上nav-link类名，并且加上path属性\n    //     $('.nav-link').each(function (item){\n    //         if ( $(this).attr('path') === location.hash ) {\n    //             $(this).addClass('active');\n    //         }else {\n    //             $(this).removeClass('active');\n    //         }\n    //     })\n    // }\n\n  }, {\n    key: \"listenHashChange\",\n    value: function listenHashChange() {\n      // 监听hash值变化的\n      window.addEventListener('load', this.refresh.bind(this)); // 当hash值变化的时候此事件会执行\n\n      window.addEventListener('hashchange', this.refresh.bind(this));\n    }\n  }]);\n\n  return Router;\n}();\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Router);\n\n//# sourceURL=webpack:///./src/js/route/index.js?");
+
+/***/ }),
+
+/***/ "./src/js/route/route.js":
+/*!*******************************!*\
+  !*** ./src/js/route/route.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _controllers_home_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../controllers/home_controller */ \"./src/js/controllers/home_controller.js\");\n\nvar routes = {\n  '#/home': _controllers_home_controller__WEBPACK_IMPORTED_MODULE_0__[\"default\"] // '#/mine': mine_controller\n\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (routes);\n\n//# sourceURL=webpack:///./src/js/route/route.js?");
 
 /***/ }),
 
