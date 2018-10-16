@@ -2,16 +2,15 @@
 
 import shoplist_template from '../views/shoplist/shoplist.html';
 import shoplist_models from '../models/shoplist_models.js';
-import BScroll from 'better-scroll';
 
 const render = async () => {
     
     let _template = Handlebars.compile(shoplist_template);
-
     var data = await shoplist_models.shop_list();
     let _html = _template({shoplist:data.items});
 
     $('ul.shoplist').html(_html); 
+    
     //查看活动
     $('li.item').bind('click',function(e){
         if(e.target.nodeName === 'I'){
@@ -30,15 +29,23 @@ const render = async () => {
         }
     })
 
-    let scroll = new BScroll('#root',{
-        probeType:2
-    })
-    //屏幕滚动事件
-    scroll.on('scroll',({x,y})=>{
-        if(y>0){
-            scroll.scrollTo(0,0);
+    var Y = $('#root').height(); 
+    var flag = true;
+    $(window).on('scroll',function(){
+        var scroll_y = $(window).scrollTop();
+        if(scroll_y > Y-1350 && flag == true){
+            flag = false;
+            $('.loading').css('display','flex');
+            setTimeout(()=>{
+                $('.loading').css('display','none');
+                $('ul.shoplist').html(_html+$('ul.shoplist').html());
+                Y = $('#root').height();
+                flag = true;
+            },2000)
         }
     })
+
+    
 }
 export default {
     render
