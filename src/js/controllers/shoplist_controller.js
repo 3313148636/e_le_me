@@ -5,11 +5,12 @@ import shoplist_models from '../models/shoplist_models.js';
 
 const render = async () => {
     
+    var text = $('ul.shoplist').html()
     let _template = Handlebars.compile(shoplist_template);
     var data = await shoplist_models.shop_list();
     let _html = _template({shoplist:data.items});
 
-    $('ul.shoplist').html(_html); 
+    $('ul.shoplist').html(_html + text); 
     
     //查看活动
     $('li.item').bind('tap',function(e){
