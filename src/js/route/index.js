@@ -1,17 +1,13 @@
 
-// 实现路由工具
-
-import routes from './route';
+import {routes} from './route'
 
 class Router {
-
-    constructor () {
-        this.routes = routes; // 路由表
-        this.initial = '#/home'; // 默认路由
+    constructor({ initial }){
+        this.routes = routes ; //路由表
+        this.initial = initial; // 默认路由
     }
-
-    init () {
-        this.initialHash(); 
+    init(){
+        this.initialHash();
         this.listenHashChange();
     }
 
@@ -29,7 +25,6 @@ class Router {
 
     refresh () { // 根据当前的路径 来 切换路由
         let hash = location.hash;
-
         if ( !this.routes[hash] ) { // 路由表里没有配置这个路由
             // 回到默认路由
             location.hash = this.initial;
