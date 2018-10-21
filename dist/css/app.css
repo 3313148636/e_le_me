@@ -878,3 +878,199 @@ div {
           font-size: .373333rem;
           padding: .32rem .8rem .266667rem .4rem;
           color: #6e6e6e; }
+
+.menu {
+  background: #fff;
+  min-height: 17.786667rem; }
+  .menu .menu-header {
+    height: 2.666667rem;
+    margin-bottom: .8rem;
+    text-align: center; }
+    .menu .menu-header img:first-of-type {
+      width: 10rem;
+      height: 2.666667rem; }
+    .menu .menu-header img:nth-of-type(2) {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      width: 25px;
+      height: 40px; }
+    .menu .menu-header img:nth-of-type(3) {
+      position: absolute;
+      height: 2rem;
+      top: 80px;
+      left: 300px; }
+    .menu .menu-header span {
+      border-top-left-radius: .08rem;
+      border-bottom-right-radius: .08rem;
+      background-image: linear-gradient(90deg, #fff100, #ffe339);
+      width: .586667rem;
+      height: .32rem;
+      color: #6f3f15;
+      font-weight: 700;
+      position: relative;
+      top: -125px;
+      z-index: 10;
+      left: -51px; }
+  .menu .menu-logo {
+    height: 2.933333rem; }
+    .menu .menu-logo h2 {
+      font-size: .546667rem;
+      font-weight: 700;
+      white-space: nowrap;
+      position: relative;
+      padding-right: .266667rem;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .menu .menu-logo h2 span {
+        text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      .menu .menu-logo h2 i {
+        width: .4rem;
+        position: relative;
+        height: .653333rem; }
+      .menu .menu-logo h2 i::after {
+        content: "";
+        border-style: solid;
+        border-width: .146667rem 0 .146667rem .173333rem;
+        border-color: transparent transparent transparent rgba(0, 0, 0, 0.67);
+        position: absolute;
+        left: .16rem;
+        top: .213333rem; }
+    .menu .menu-logo .commit {
+      white-space: nowrap;
+      height: .32rem;
+      margin-top: .173333rem;
+      font-size: .293333rem;
+      color: #666;
+      text-align: center; }
+    .menu .menu-logo .manjian {
+      display: flex;
+      padding: 0 1rem 0 1rem;
+      margin-top: .266667rem; }
+      .menu .menu-logo .manjian span:nth-of-type(1) {
+        font-size: .266667rem;
+        color: #fff;
+        background-color: #f07373; }
+      .menu .menu-logo .manjian span:nth-of-type(2) {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        flex: 1;
+        font-size: .293333rem;
+        margin-left: .16rem; }
+      .menu .menu-logo .manjian span:nth-of-type(3) {
+        color: #999;
+        font-size: .293333rem; }
+    .menu .menu-logo .index-TmrYy {
+      color: #999;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin: .226667rem auto .266667rem;
+      padding: 0;
+      white-space: nowrap;
+      margin: .226667rem 1rem .266667rem 1rem; }
+  .menu .nav {
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+    background: #fff; }
+    .menu .nav ul {
+      height: 1.066667rem;
+      display: flex;
+      list-style: none;
+      margin: 0; }
+      .menu .nav ul li {
+        width: 3.333333rem;
+        text-align: center;
+        border-bottom: 1px solid #ebebeb; }
+        .menu .nav ul li a {
+          text-decoration: none;
+          width: .8rem;
+          text-align: center;
+          font-size: .4rem;
+          display: inline-block;
+          position: relative;
+          color: #333;
+          display: inline-block;
+          height: 1.013333rem;
+          line-height: 1.066667rem; }
+        .menu .nav ul li .active {
+          border-bottom: .053333rem solid #2395ff;
+          font-weight: 700; }
+  .menu .menu-main {
+    display: flex; }
+    .menu .menu-main .left ul {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      list-style: none;
+      margin: 0;
+      background-color: #f8f8f8; }
+      .menu .menu-main .left ul li {
+        padding: .466667rem .2rem .466667rem .2rem;
+        width: 2.053333rem;
+        height: 1.306667rem;
+        box-sizing: border-box;
+        font-size: .32rem;
+        color: #666; }
+    .menu .menu-main .right {
+      margin-left: .266667rem; }
+      .menu .menu-main .right ul {
+        list-style: none;
+        margin: 0; }
+        .menu .menu-main .right ul li {
+          padding: .266667rem 0 .266667rem 0;
+          width: 7.68rem;
+          height: 3.066667rem;
+          box-sizing: border-box;
+          display: flex; }
+          .menu .menu-main .right ul li .left img {
+            width: 2.533333rem;
+            height: 2.533333rem; }
+          .menu .menu-main .right ul li .right .span01 {
+            font-weight: 700;
+            overflow: hidden;
+            font-size: .4rem;
+            white-space: nowrap;
+            width: 4rem;
+            display: inline-block;
+            text-overflow: ellipsis; }
+          .menu .menu-main .right ul li .right p:nth-of-type(1) {
+            margin: .133333rem 0;
+            font-size: .266667rem;
+            color: #999;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 4.266667rem; }
+          .menu .menu-main .right ul li .right p:nth-of-type(2) {
+            margin: .133333rem 0;
+            font-size: .266667rem;
+            color: #999;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 4.266667rem; }
+            .menu .menu-main .right ul li .right p:nth-of-type(2) span:nth-of-type(1) {
+              margin-right: .133333rem; }
+          .menu .menu-main .right ul li .right p:nth-of-type(3) {
+            height: 50px; }
+            .menu .menu-main .right ul li .right p:nth-of-type(3) span:nth-of-type(1) {
+              color: #ff5339;
+              font-size: .30rem; }
+              .menu .menu-main .right ul li .right p:nth-of-type(3) span:nth-of-type(1) i {
+                font-size: .48rem;
+                font-style: normal; }
+            .menu .menu-main .right ul li .right p:nth-of-type(3) span:nth-of-type(2) {
+              float: right;
+              display: inline-block;
+              text-align: center;
+              width: .586667rem;
+              height: .586667rem;
+              background: #2396ff;
+              border-radius: 50%;
+              color: #fff;
+              font-size: .4rem; }

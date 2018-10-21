@@ -9,8 +9,6 @@ const render = async(path) => {
     let _template = Handlebars.compile(indent_detail_template);
     var data = await indent_detail_list(path);
 
-    console.log(data);
-    
     let _html = _template({shoplist:data});
 
     document.querySelector('#root').innerHTML = _html;
