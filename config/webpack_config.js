@@ -3,7 +3,8 @@
 const webpack_config = {
     mode : 'development',
     entry : {
-        app : './src/js/app.js'
+        app : './src/js/app.js',
+        login:'./src/js/login.js'
     },
     // entry: ['./src/javascripts/app.js', './src/javascripts/vendor.js'],
     output: {
