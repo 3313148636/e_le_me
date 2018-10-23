@@ -1,6 +1,8 @@
 
 //home视图的控制器
 import home_template from '../views/home/home.html';
+import position_model from '../models/position_modle'
+
 
 import entries_controller from './entries_controller';
 import shoplist_controller from './shoplist_controller';
@@ -9,9 +11,17 @@ import menu_controller from './menu_controller';
 
 
 // 负责将home视图模板渲染在对应的地方
-const render = () => {
+const render = async() => {
+
+    let position = await position_model.position();
     
-    document.querySelector('#root').innerHTML = home_template;
+    let _template = Handlebars.compile(home_template);
+    let _html = _template({city:position.content.address});
+
+    
+
+    
+    document.querySelector('#root').innerHTML = _html;
     entries_controller.render();
     shoplist_controller.render();
     footer_controller.render();
@@ -19,6 +29,7 @@ const render = () => {
     $('.shoplist').on('tap',()=>{
         menu_controller.render();
     })
+    
 }
 export default {
     render
