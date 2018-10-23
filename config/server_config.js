@@ -7,17 +7,26 @@ const server_config = {
     port:8080,
     livereload:true,
     middleware: [
-        // proxy('/eleme', { // /lagou 这个是判断依据 当我们请求'http://localhost:8080/lagou/abc'的时候，这个代理就生效了
+        // proxy('/lagou', { // /lagou 这个是判断依据 当我们请求'http://localhost:8080/lagou/abc'的时候，这个代理就生效了
         //     target: 'https://h5.ele.me',// 配置目标服务器 当前服务器回去请求 https://m.lagou.com/lagou/abc
         //     changeOrigin: true,
         //     pathRewrite: { // https://m.lagou.com/abc
-        //         '^/eleme': ''
+        //         '^/lagou': ''
         //     }
         // }),
         proxy('/api', {
             target: 'http://localhost:3000',
             changeOrigin: true,
-        })
+        }),
+        proxy('/position',{
+            target: 'http://api.map.baidu.com',
+            changeOrigin: true,
+            pathRewrite : {
+                '^/position':''
+            }
+        }
+
+        )
     ]
     //open:true,
     // 以gulp file.js文件路径为基准
