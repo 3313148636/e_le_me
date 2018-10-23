@@ -1,5 +1,5 @@
 
-// 提供商品信息数据
+// 提供商品信息详情数据
 const menu = () => {
     return  $.ajax({
                 // url: '/static/mock/list.json',

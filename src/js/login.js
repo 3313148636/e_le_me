@@ -1,5 +1,5 @@
 
-
+//手机号登录验证
 const controller = function(){
     let reg = /^1(3|4|5|7|8)\d{9}$/;
     

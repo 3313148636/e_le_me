@@ -395,12 +395,11 @@ div {
 
 .home-container .loading {
   width: 10rem;
-  height: .666667rem;
   display: none;
   padding: .266667rem 0;
   justify-content: center;
   align-self: baseline;
-  margin-bottom: 2rem; }
+  margin-bottom: 1.3rem; }
   .home-container .loading img {
     width: .666667rem;
     height: .666667rem; }

@@ -1,6 +1,6 @@
 
 import footer_temlpate from '../views/footer.html';
-
+//footer
 const render = () =>{
     let _html = footer_temlpate;
     $('.home-container').append(_html);

@@ -28,6 +28,7 @@ const render = async () => {
             },2000)
         }
     })
+    //点击进入订单详情
     $('#indent-list').on('tap','li',function(){
         var path = $(this).attr('path');
         indent_detail_controller.render(path);

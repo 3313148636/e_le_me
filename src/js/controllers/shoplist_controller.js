@@ -29,7 +29,7 @@ const render = async () => {
             }
         }
     })
-
+    //滚动ajax请求数据加载
     var Y = $('#root').height(); 
     var flag = true;
     $(window).on('scroll',function(){

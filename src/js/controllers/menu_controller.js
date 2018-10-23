@@ -16,7 +16,8 @@ const render = async () => {
     document.querySelector('#root').innerHTML = _html;
 
     $(window).scrollTop(0);
-    $('.callback').on('tap',()=>{
+    //点击返回
+    $('.menu-header').on('tap','.callback',()=>{
         home_controller.render();
         footer_controller.render();
     })

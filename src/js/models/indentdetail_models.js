@@ -1,5 +1,5 @@
 
-// 提供商品信息数据
+// 提供订单详情信息数据
 const indent_detail_list = (path) => {
 
     return  $.ajax({
